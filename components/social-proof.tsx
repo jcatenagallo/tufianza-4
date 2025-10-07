@@ -1,26 +1,29 @@
-import { Star } from "lucide-react"
-import { Card } from "@/components/ui/card"
+import { Star } from "lucide-react";
+import { Card } from "@/components/ui/card";
 
 const testimonials = [
   {
     name: "Juan",
     age: 28,
-    quote: "Mejor que pedir favores a mi tío. En 24 horas tenía mi garantía aprobada.",
+    quote:
+      "Mejor que pedir favores a mi tío. En 24 horas tenía mi garantía aprobada.",
     rating: 5,
   },
   {
     name: "Martina",
     age: 32,
-    quote: "Increíble lo fácil que fue. Solo con mi recibo de sueldo pude alquilar.",
-    rating: 5,
+    quote:
+      "Increíble lo fácil que fue. Solo con mi recibo de sueldo pude alquilar.",
+    rating: 4,
   },
   {
     name: "Lucas",
     age: 26,
-    quote: "Finalmente pude independizarme sin depender de nadie. Súper recomendado.",
+    quote:
+      "Finalmente pude independizarme sin depender de nadie. Súper recomendado.",
     rating: 5,
   },
-]
+];
 
 export function SocialProof() {
   return (
@@ -36,12 +39,17 @@ export function SocialProof() {
               {/* Stars */}
               <div className="flex gap-1 mb-4">
                 {[...Array(testimonial.rating)].map((_, i) => (
-                  <Star key={i} className="w-5 h-5 fill-accent text-accent" />
+                  <Star
+                    key={i}
+                    className="w-5 h-5 fill-yellow-200 text-yellow-200"
+                  />
                 ))}
               </div>
 
               {/* Quote */}
-              <p className="text-lg text-foreground mb-6 leading-relaxed">"{testimonial.quote}"</p>
+              <p className="text-lg text-foreground mb-6 leading-relaxed">
+                "{testimonial.quote}"
+              </p>
 
               {/* Name and age */}
               <p className="font-bold text-foreground">
@@ -52,5 +60,5 @@ export function SocialProof() {
         </div>
       </div>
     </section>
-  )
+  );
 }
